@@ -112,7 +112,7 @@ if($kelas!=""){
         $w=mysqli_fetch_assoc($qWali);
 
         $waliNama=$w['nama_wali'];
-        $waliNip=$w['nbm_wali'];
+        $waliNbm=$w['nbm_wali'];
 
     }
 
