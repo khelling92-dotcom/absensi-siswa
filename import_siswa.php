@@ -33,17 +33,17 @@ if (isset($_POST['import'])) {
                     // Validasi
                     if (!preg_match('/^[0-9]{4}$/', $nis)) {
                         $gagal++;
-                        $errors[] = "Baris $row: NIS maksimal 15 digit angka.";
+                        $errors[] = "Baris $row: NIS minimal 7 digit angka.";
                         continue;
                     }
                     if (!preg_match('/^[0-9]{10}$/', $nisn)) {
                         $gagal++;
-                        $errors[] = "Baris $row: NISN maksimal 15 digit angka.";
+                        $errors[] = "Baris $row: NISN minimal 7 digit angka.";
                         continue;
                     }
                     if (strlen($kelas) > 7) {
                         $gagal++;
-                        $errors[] = "Baris $row: Kelas maksimal 10 karakter.";
+                        $errors[] = "Baris $row: Kelas minimal 6 karakter.";
                         continue;
                     }
 
