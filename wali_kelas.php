@@ -127,7 +127,7 @@ $waliList = mysqli_query($conn, "SELECT * FROM wali_kelas ORDER BY kelas");
             echo "<td>{$no}</td>";
             echo "<td>{$row['kelas']}</td>";
             echo "<td>{$row['nama_wali']}</td>";
-            echo "<td>{$row['nbm_wali']}</td>";
+            echo "<td>{$row['nip_wali']}</td>";
             echo "<td>
                     <button class='btn btn-warning btn-sm' data-bs-toggle='modal' data-bs-target='#editModal{$row['id']}'>Edit</button>
                     <a href='wali_kelas.php?hapus={$row['id']}' class='btn btn-danger btn-sm' onclick=\"return confirm('Yakin hapus data ini?')\">Hapus</a>
