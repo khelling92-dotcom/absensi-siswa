@@ -195,7 +195,7 @@ $tanggal_terakhir = date("j F Y", strtotime("$tahun-$bulan-" . cal_days_in_month
         <?= $tanggal_terakhir ?><br>
         Wali Kelas <?= $kelas != '' ? $kelas : '(Semua Kelas)' ?><br><br><br><br>
         <u><?= $wali_nama ?></u><br>
-        NIP. <?= $wali_nip ?>
+        NBM. <?= $wali_nbm ?>
       </td>
     </tr>
   </table>
