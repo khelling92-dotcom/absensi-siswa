@@ -46,12 +46,12 @@ $profil = mysqli_fetch_assoc(mysqli_query($conn, "SELECT kepala_sekolah, nip_kep
 
 // Ambil data wali kelas
 $wali_nama = '....................................';
-$wali_nbm = '........................';
+$wali_nip = '........................';
 if ($kelas != '') {
-    $qWali = mysqli_query($conn, "SELECT nama_wali, nbm_wali FROM wali_kelas WHERE kelas = '$kelas' LIMIT 1");
+    $qWali = mysqli_query($conn, "SELECT nama_wali, nip_wali FROM wali_kelas WHERE kelas = '$kelas' LIMIT 1");
     if ($w = mysqli_fetch_assoc($qWali)) {
         $wali_nama = $w['nama_wali'];
-        $wali_nbm = $w['nbm_wali'];
+        $wali_nip = $w['nip_wali'];
     }
 }
 
@@ -189,13 +189,13 @@ $tanggal_terakhir = date("j F Y", strtotime("$tahun-$bulan-" . cal_days_in_month
         Mengetahui,<br>
         Kepala Sekolah<br><br><br><br>
         <u><?= $profil['kepala_sekolah'] ?? '....................................' ?></u><br>
-        NBM. <?= $profil['nbm_kepala'] ?? '........................' ?>
+        NIP. <?= $profil['nip_kepala'] ?? '........................' ?>
       </td>
       <td style="width:50%;">
         <?= $tanggal_terakhir ?><br>
         Wali Kelas <?= $kelas != '' ? $kelas : '(Semua Kelas)' ?><br><br><br><br>
         <u><?= $wali_nama ?></u><br>
-        NBM. <?= $wali_nbm ?>
+        NIP. <?= $wali_nip ?>
       </td>
     </tr>
   </table>
