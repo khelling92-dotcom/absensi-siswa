@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($queryLibur)) {
 }
 
 // Ambil data profil sekolah
-$profil = mysqli_fetch_assoc(mysqli_query($conn, "SELECT kepala_sekolah, nbm_kepala FROM profil_sekolah LIMIT 1"));
+$profil = mysqli_fetch_assoc(mysqli_query($conn, "SELECT kepala_sekolah, nip_kepala FROM profil_sekolah LIMIT 1"));
 
 // Ambil data wali kelas
 $wali_nama = '....................................';
