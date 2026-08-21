@@ -41,9 +41,9 @@ if (isset($_POST['import'])) {
                         $errors[] = "Baris $row: NISN harus 10 digit angka.";
                         continue;
                     }
-                    if (strlen($kelas) > 7) {
+                    if (strlen($kelas) > 8) {
                         $gagal++;
-                        $errors[] = "Baris $row: Kelas maksimal 7 karakter.";
+                        $errors[] = "Baris $row: Kelas maksimal 8 karakter.";
                         continue;
                     }
 
