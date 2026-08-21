@@ -31,7 +31,7 @@ if (isset($_POST['import'])) {
 
                 if ($nis != "" && $nisn != "" && $nama != "" && $kelas != "") {
                     // Validasi
-                    if (!preg_match('/^[0-9]{4}$/', $nis)) {
+                    if (!preg_match('/^[0-9]{9}$/', $nis)) {
                         $gagal++;
                         $errors[] = "Baris $row: NIS harus 9 digit angka.";
                         continue;
